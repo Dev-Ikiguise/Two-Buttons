@@ -1,0 +1,29 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://Scenes/Player.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Scenes/Zombie.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Art/Background.png" type="Texture" id=3]
+
+[node name="World" type="Node2D"]
+
+[node name="Floor" type="TextureRect" parent="."]
+margin_right = 1920.0
+margin_bottom = 1080.0
+rect_scale = Vector2( 0.532862, 0.556666 )
+texture = ExtResource( 3 )
+stretch_mode = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Player" parent="." instance=ExtResource( 1 )]
+position = Vector2( 512, 320 )
+
+[node name="Zombie" parent="." instance=ExtResource( 2 )]
+position = Vector2( 102, 501 )
+
+[node name="Zombie2" parent="." instance=ExtResource( 2 )]
+position = Vector2( 98, 73 )
+
+[node name="Zombie3" parent="." instance=ExtResource( 2 )]
+position = Vector2( 931, 50 )
